@@ -63,7 +63,7 @@ export class Cache {
     private async loadImage(key: string) {
         const isSameOrigin = CacheStorage.isSameOrigin(key);
         const useCORS =
-            !isInlineImage(key) && this._options.useCORS === true && FEATURES.SUPPORT_CORS_IMAGES && !isSameOrigin;
+            !isInlineImage(key) && this._options.useCORS === true && FEATURES.SUPPORT_CORS_IMAGES;
         const useProxy =
             !isInlineImage(key) &&
             !isSameOrigin &&
